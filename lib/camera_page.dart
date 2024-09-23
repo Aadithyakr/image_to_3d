@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+import 'shape_detection.dart';
 
 class CameraPage extends StatefulWidget {
   const CameraPage({super.key});
@@ -20,6 +21,14 @@ class _CameraPageState extends State<CameraPage> {
       setState(() {
         _imageFile = File(pickedFile.path);
       });
+
+      // Navigate to shape detection page
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ShapeDetectionPage(imageFile: _imageFile!),
+        ),
+      );
     }
   }
 
