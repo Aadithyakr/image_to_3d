@@ -7,10 +7,10 @@ class CameraPage extends StatefulWidget {
   const CameraPage({super.key});
 
   @override
-  _CameraPageState createState() => _CameraPageState();
+  CameraPageState createState() => CameraPageState();
 }
 
-class _CameraPageState extends State<CameraPage> {
+class CameraPageState extends State<CameraPage> {
   final ImagePicker _picker = ImagePicker();
   File? _imageFile;
 
